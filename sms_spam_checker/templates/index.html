@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SMS Spam Checker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="text-align: center;">
+	<h1>SMS SPAM CHECKER </h1>
+	<form action = "http://localhost:5000/" method="POST">
+		<textarea name="textarea" rows="5" cols="40" placeholder="Please Enter your message."></textarea>
+		<br><br>
+		<input type="submit" value="Submit">
+	</form>
+	
+	<div id="output"></div>
+        <p class="output-statement">{{output}}</p>
+    </div>
+
+</body>
+</html>
+
+
+
