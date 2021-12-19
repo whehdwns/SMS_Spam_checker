@@ -47,20 +47,11 @@ def SMS_testing(message):
     model_NB.fit(X_train_ctvt,y_train)
 
     pred_NB = model_NB.predict(X_test_ctvt)
-    NB_score =model_NB.score(X_train_ctvt,y_train)
-    NB_pred_score =round(NB_score*100,2)
-    #print("MultinomialNB score is " + str(NB_pred_score) +"%")
     NB_pred_accuracy = metrics.accuracy_score(y_test, pred_NB)
-    NB_pred_accuracy_score =round(NB_pred_accuracy*100,2)
-    #print("MultinomialNB Accuracy of class prediction is " + str(NB_pred_accuracy_score) +"%")
+    
     sms = []
     sms.append(message)
-
-    # sms=["Amazon: Congratulations James, you came 3rd in today's Amazon pods raffle! Click the link to : b2gxv.info/5spfY15YPt",
-    #      "May I ask also who this is? I hope I'm texting back the right person I called while ago. Thank you.",
-    #      "Final Notice: Dongjun We tried to give your FREE $1000 bonus voucher. Please fill in you details here ki1q.pw/06srYg9ka Enjoy your weekend."
-    #     ]
-
+    
     message=[]
 
     for i in range(len(sms)):
